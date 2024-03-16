@@ -3,6 +3,7 @@ import { RiSearchLine } from "react-icons/ri";
 import { PiArrowCircleRight } from "react-icons/pi";
 import { useState } from "react";
 
+
 const NAvbar = () => {
     const [inputValue, setInputValue] = useState('');
     const [showSuggestions, setShowSuggestions] = useState(false);
@@ -83,6 +84,8 @@ const NAvbar = () => {
                         <button>close</button>
                     </form>
                 </dialog>
+
+                {/* <MainNews searchInput={inputValue} /> */}
             </div>
 
         </div >
