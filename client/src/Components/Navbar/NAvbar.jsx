@@ -80,7 +80,7 @@ const NAvbar = ({ handleShowSearch }) => {
                     {/* The icon to open modal  */}
                     <li onClick={() => document.getElementById('my_modal_2').showModal()} className="text-lg hover:bg-[#E0561B] hover:text-white  px-44 md:px-2 py-5"><IoSearchSharp /></li>
                 </ul>
-                <div className="absolute top-16 left-5 md:left-44">
+                <div className="absolute top-16 left-5 md:left-44 z-10">
                     {hoveredItem && (
                         <div className="card bg-white border px-5 py-10 shadow-2xl w-96 md:w-[450px] lg:w-[980px]  lg:px-10 ">
                             <h2 className="font-bold text-lg">{hoveredItem.title}</h2>
@@ -119,7 +119,7 @@ const NAvbar = ({ handleShowSearch }) => {
                 <dialog id="my_modal_2" className="modal">
                     <div className="modal-box">
                         <ul className="flex items-center bg-[#D9D9D9] w-full h-24 py-5 px-5 justify-between rounded-t-lg border-t-2">
-                            <li onClick={() => handleFixedItemClick('Search for Blogs')} className={`cursor-pointer ${selectedItemIndex === -1 ? 'bg-gray-100' : ''}`}>Search for <br /> Blogs</li>
+                            <li onClick={() => handleFixedItemClick('Search for Blogs')} className={`cursor-pointer ${selectedItemIndex === -1 ? 'bg-gray-100' : ''}`}>Search for  <br /> Blogs</li>
                             <li onClick={() => handleFixedItemClick('Find an University')} className={`cursor-pointer ${selectedItemIndex === -2 ? 'bg-gray-100' : ''}`}>Find an <br /> University</li>
                             <li onClick={() => handleFixedItemClick('Find a Scholarship')} className={`cursor-pointer ${selectedItemIndex === -3 ? 'bg-gray-100' : ''}`}>Find a <br /> Scholarship</li>
                             <li onClick={() => handleFixedItemClick('Events')} className={`cursor-pointer ${selectedItemIndex === -4 ? 'bg-gray-100' : ''}`}>Events</li>
