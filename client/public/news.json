@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title": "Exciting New Tools for Designers",
+        "image": "https://i.ibb.co/XsWK7RP/25e9faf532cce1f4200b4a54631328e96dd0940b.png",
+        "image2": "https://i.ibb.co/GWGgLMK/cc36d8e933ff4856aa4f3e581ca90d206a2547aa.png",
+        "descrtiption":"The fast-paced world of design never stops turning, and staying ahead of the curve is essential for creatives. As…",
+        "author":"PADDI MACDONNELL"
+    },
+    {
+        "id": 2,
+        "title": "Web Tech Trends to Watch in 2024 and Beyond",
+        "image": "https://i.ibb.co/b2ZpcGR/7ec9603488a12901d3cb62b256056dad78b97fff.png",
+        "image2": "https://i.ibb.co/dtgqq4m/fbb0e6cd4d6da201afd75e9d442166b184bcc1f7.png",
+        "descrtiption":"The fast-paced world of design never stops turning, and staying ahead of the curve is essential for creatives. As…",
+        "author":"PADDI MACDONNELL"
+    },
+    {
+        "id": 3,
+        "title": "6 Best AI Productivity Apps in 2024",
+        "image": "https://i.ibb.co/dtgqq4m/fbb0e6cd4d6da201afd75e9d442166b184bcc1f7.png",
+        "image2": "https://i.ibb.co/b2ZpcGR/7ec9603488a12901d3cb62b256056dad78b97fff.png",
+        "descrtiption":"The fast-paced world of design never stops turning, and staying ahead of the curve is essential for creatives. As…",
+        "author":"PADDI MACDONNELL"
+    },
+    {
+        "id": 4,
+        "title": "Surviving the Leap from College to Real-World Design",
+        "image": "https://i.ibb.co/GWGgLMK/cc36d8e933ff4856aa4f3e581ca90d206a2547aa.png",
+        "image2": "https://i.ibb.co/XsWK7RP/25e9faf532cce1f4200b4a54631328e96dd0940b.png",
+        "descrtiption":"The fast-paced world of design never stops turning, and staying ahead of the curve is essential for creatives. As…",
+        "author":"PADDI MACDONNELL"
+    }
+]

@@ -1,13 +1,13 @@
 import { IoSearchSharp } from "react-icons/io5";
 import { RiSearchLine } from "react-icons/ri";
-import { PiArrowCircleRight } from "react-icons/pi";
+// import { PiArrowCircleRight } from "react-icons/pi";
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
-
-const NAvbar = () => {
+const NAvbar = ({handleShowSearch}) => {
     const [inputValue, setInputValue] = useState('');
     const [showSuggestions, setShowSuggestions] = useState(false);
-    const [suggestions, setSuggestions] = useState(['Exciting New Tools for Designers, March 2024', 'Web Tech Trends to Watch in 2024 and Beyond', '6 Best AI Productivity Apps in 2024', 'Exciting New Tools for Designers, March 2024']); // Example suggestions
+    const [suggestions, setSuggestions] = useState(['Exciting New Tools for Designers, March 2024', 'Web Tech Trends to Watch in 2024 and Beyond', '6 Best AI Productivity Apps in 2024', 'Surviving the Leap from College to Real-World Design']); // Example suggestions
     const [selectedItemIndex, setSelectedItemIndex] = useState(null);
 
     const handleInputChange = (event) => {
@@ -22,6 +22,7 @@ const NAvbar = () => {
 
     const handleItemClick = (index) => {
         setSelectedItemIndex(index);
+        handleShowSearch(suggestions[index]);
         // Do something when an item is clicked, such as filling the input field with the clicked suggestion
         setInputValue(suggestions[index]);
     };
@@ -30,6 +31,8 @@ const NAvbar = () => {
         // Do something when a fixed item is clicked
         setInputValue(text);
     };
+
+   
 
     return (
         <div className="bg-[#000000]">
@@ -76,7 +79,9 @@ const NAvbar = () => {
                         )}
 
 
-                        <PiArrowCircleRight className=" text-4xl ml-[425px] mt-44" />
+                        {/* <PiArrowCircleRight
+                        onClick={() => handleShowSearch(inputValue)}
+                         className=" text-4xl ml-[425px] mt-44" /> */}
 
 
                     </div>
@@ -85,11 +90,15 @@ const NAvbar = () => {
                     </form>
                 </dialog>
 
-                {/* <MainNews searchInput={inputValue} /> */}
+               
             </div>
 
         </div >
     );
+};
+
+NAvbar.propTypes = {
+    handleShowSearch: PropTypes.func.isRequired,
 };
 
 export default NAvbar;
