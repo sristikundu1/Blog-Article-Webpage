@@ -53,7 +53,7 @@ const MainNews = ({ searchItem, clickedItem }) => {
 
         const information = {FirstName, LastName, Email, formattedMobileNumber, Course, Plan, Address, Fund, Level,termsAgreement,contactPreference,receiveUpdates};
 
-        fetch(" http://localhost:5000/info", {
+        fetch(" https://server-five-rust.vercel.app/info", {
             method: 'POST',
             headers: {
                 'content-type': "application/json"
@@ -72,10 +72,10 @@ const MainNews = ({ searchItem, clickedItem }) => {
     }
 
     return (
-        <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-3 gap-3 my-16">
+        <div className="pl-16 md:pl-14 lg:max-w-4xl mx-auto lg:pl-0">
+            <div className="grid grid-cols-1 my-16 lg:grid-cols-3 gap-3 ">
                 {/* left side  */}
-                <div className="col-span-2 ">
+                <div className="lg:col-span-2 ">
 
 
                     {searchItem.length > 0 ? (
@@ -216,7 +216,7 @@ const MainNews = ({ searchItem, clickedItem }) => {
                 </div>
 
                 {/* right side  */}
-                <div className="col-span-1  ">
+                <div className="lg:col-span-1  ">
                     <div className="bg-[#1C66D7] rounded-t-lg ">
                         <div className=" text-white px-5 py-3">
                             <h2 className="font-medium text-xl">Interested in studying UX?</h2>

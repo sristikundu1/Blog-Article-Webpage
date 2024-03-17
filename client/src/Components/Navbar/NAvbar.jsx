@@ -39,20 +39,19 @@ const NAvbar = ({ handleShowSearch }) => {
     const handleItemClick = (index) => {
         setSelectedItemIndex(index);
         handleShowSearch(suggestions[index]);
-        // Do something when an item is clicked, such as filling the input field with the clicked suggestion
         setInputValue(suggestions[index]);
     };
 
     const handleFixedItemClick = (text) => {
-        // Do something when a fixed item is clicked
+      
         setInputValue(text);
     };
 
     const handleItemHover = (item) => {
-        // Access data from 'infos' based on the hovered item
+        
         const category = infos.find(category => category.name === item);
         if (category) {
-            // Set the hovered item along with additional data from the fetched JSON
+           
             setHoveredItem(category);
         }
     };
@@ -70,27 +69,27 @@ const NAvbar = ({ handleShowSearch }) => {
     return (
         <div className="bg-[#000000] relative">
             <div>
-                <ul className="flex items-center justify-center gap-6  text-[#bebdbd] text-xs font-medium">
-                    <li className=" hover:bg-[#E0561B] hover:text-white px-2 py-5 " onMouseEnter={() => handleItemHover("Study abroad")} onMouseLeave={handleMouseLeave}>Study abroad</li>
-                    <li className=" hover:bg-[#E0561B] hover:text-white  px-2 py-5" onMouseEnter={() => handleItemHover("What we do?")} onMouseLeave={handleMouseLeave}>What we do?</li>
-                    <li className=" hover:bg-[#E0561B] hover:text-white  px-2 py-5" onMouseEnter={() => handleItemHover("Destinations")} onMouseLeave={handleMouseLeave}>Destinations</li>
-                    <li className=" hover:bg-[#E0561B] hover:text-white  px-2 py-5" onMouseEnter={() => handleItemHover("Find a course")} onMouseLeave={handleMouseLeave}>Find a course</li>
-                    <li className=" hover:bg-[#E0561B] hover:text-white  px-2 py-5" onMouseEnter={() => handleItemHover("Student Essential Services")} onMouseLeave={handleMouseLeave}>Student Essential Services</li>
-                    <li className=" hover:bg-[#E0561B] hover:text-white  px-2 py-5" onMouseEnter={() => handleItemHover("IELTS")} onMouseLeave={handleMouseLeave}>IELTS</li>
+                <ul className="flex flex-col  text-[#bebdbd] text-xs font-medium md:flex-row items-center justify-center gap-6 ">
+                    <li className=" hover:bg-[#E0561B] hover:text-white px-44 md:px-2 py-5 " onMouseEnter={() => handleItemHover("Study abroad")} onMouseLeave={handleMouseLeave}>Study abroad</li>
+                    <li className=" hover:bg-[#E0561B] hover:text-white  px-44 md:px-2 py-5" onMouseEnter={() => handleItemHover("What we do?")} onMouseLeave={handleMouseLeave}>What we do?</li>
+                    <li className=" hover:bg-[#E0561B] hover:text-white  px-44 md:px-2 py-5" onMouseEnter={() => handleItemHover("Destinations")} onMouseLeave={handleMouseLeave}>Destinations</li>
+                    <li className=" hover:bg-[#E0561B] hover:text-white  px-44 md:px-2 py-5" onMouseEnter={() => handleItemHover("Find a course")} onMouseLeave={handleMouseLeave}>Find a course</li>
+                    <li className=" hover:bg-[#E0561B] hover:text-white  px-44 md:px-2 py-5" onMouseEnter={() => handleItemHover("Student Essential Services")} onMouseLeave={handleMouseLeave}>Student Essential Services</li>
+                    <li className=" hover:bg-[#E0561B] hover:text-white  px-44 md:px-2 py-5" onMouseEnter={() => handleItemHover("IELTS")} onMouseLeave={handleMouseLeave}>IELTS</li>
 
                     {/* The icon to open modal  */}
-                    <li onClick={() => document.getElementById('my_modal_2').showModal()} className="text-lg hover:bg-[#E0561B] hover:text-white  px-2 py-5"><IoSearchSharp /></li>
+                    <li onClick={() => document.getElementById('my_modal_2').showModal()} className="text-lg hover:bg-[#E0561B] hover:text-white  px-44 md:px-2 py-5"><IoSearchSharp /></li>
                 </ul>
-                <div className="absolute top-16 left-44">
+                <div className="absolute top-16 left-5 md:left-44">
                     {hoveredItem && (
-                        <div className="card bg-white w-[980px] border px-10 py-10 shadow-2xl">
+                        <div className="card bg-white border px-5 py-10 shadow-2xl w-96 md:w-[450px] lg:w-[980px]  lg:px-10 ">
                             <h2 className="font-bold text-lg">{hoveredItem.title}</h2>
 
-                            <div className="flex gap-5 mb-8">
+                            <div className="flex flex-col items-center mb-8 gap-5 lg:flex-row  ">
                                 <div>
                                     <div className="image-container grid grid-cols-3 gap-5 mt-8">
                                         {hoveredItem.imageUrls.map((image, index) => (
-                                            // <h2 key={index} >{image}</h2>
+                                           
                                             <img className="rounded-lg object-cover h-44 w-56" key={index} src={image} alt="image" />
                                         ))}
                                     </div>
@@ -110,7 +109,7 @@ const NAvbar = ({ handleShowSearch }) => {
                                     ))}
                                 </div>
                             </div>
-                            {/* Additional content related to the hovered item */}
+                           
                         </div>
                     )}
                 </div>

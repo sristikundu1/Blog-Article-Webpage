@@ -7,9 +7,9 @@ import { FaYoutube } from "react-icons/fa";
 const Footer = () => {
     return (
         <div className="bg-[#1E1E1E] pt-10">
-            <div className="max-w-4xl mx-auto flex justify-between pb-10">
+            <div className="flex flex-col  items-center justify-center pb-5 gap-5 md:grid grid-cols-2  md:gap-5 md:pb-5 lg:max-w-4xl lg:mx-auto lg:flex lg:flex-row lg:justify-between lg:items-start lg:pb-10">
 
-                <div className="flex justify-start flex-col">
+                <div className="flex justify-start flex-col ml-16 lg:ml-0 ">
                     <h2 className="text-white font-semibold mb-3">Study UX</h2>
                     <ul className="flex flex-col justify-start text-[#bebdbd] text-sm leading-7 ">
                         <li className="hover:underline">How to choose your destination?</li>
@@ -39,7 +39,7 @@ const Footer = () => {
                 </div>
 
 
-                <div className="flex justify-start flex-col">
+                <div className="flex justify-start flex-col ml-0 md:ml-16 lg:ml-0">
                     <h2 className="text-white font-semibold mb-3">IELTS</h2>
                     <ul className="flex flex-col justify-start text-[#bebdbd] text-sm leading-7">
                         <li className="hover:underline">What is IELTS?</li>
@@ -70,15 +70,15 @@ const Footer = () => {
             </div>
 
             <div className="bg-[#000000] py-5">
-                <div className="max-w-4xl mx-auto flex justify-between text-[#bebdbd]">
+                <div className=" text-[#bebdbd] flex flex-col items-center justify-center gap-5 pb-5  lg:max-w-4xl lg:mx-auto lg:flex lg:flex-row lg:justify-between">
                     <p>Copyright © 2024 SG Education</p>
 
                     <div>
                         <ul className="flex items-center">
-                            <li className="border-r-2 px-2">Disclaimer</li>
-                            <li className="border-r-2 px-2">Privacy Policy</li>
-                            <li className="border-r-2 px-2">Terms Of Use</li>
-                            <li className="px-2">Investors</li>
+                            <li className="md:border-r-2 px-2">Disclaimer</li>
+                            <li className="md:border-r-2 px-2">Privacy Policy</li>
+                            <li className="md:border-r-2 px-2">Terms Of Use</li>
+                            <li className="md:px-2">Investors</li>
                         </ul>
                     </div>
 
