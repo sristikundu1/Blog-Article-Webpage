@@ -21,7 +21,7 @@ const Header = () => {
     }
     return (
         <div className="bg-[#D9D9D9]">
-            <div className="flex py-10 flex-col gap-5 justify-center items-center lg:flex-row lg:justify-between lg:max-w-6xl mx-auto  ">
+            <div className="flex py-10 flex-col gap-5 justify-center items-center lg:flex-row lg:justify-between lg:max-w-6xl mx-auto  " data-aos="zoom-in-up"data-aos-duration="3000" >
                 <div>
                     <img src={logo} alt="logo" />
                 </div>

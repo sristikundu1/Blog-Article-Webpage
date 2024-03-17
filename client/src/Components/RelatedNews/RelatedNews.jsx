@@ -18,7 +18,7 @@ const RelatedNews = ({ handleCardClick }) => {
                 {
                     news.map(item =>
                        
-                            <div className='w-52 flex flex-col'key={item.id} onClick={() => handleCardClick(item)}>
+                            <div className='w-52 flex flex-col'key={item.id} onClick={() => handleCardClick(item)} data-aos="flip-right" data-aos-duration="3000">
                                 <img className='w-52 h-40  object-cover rounded-lg' src={item.image} alt="" />
                                 <h2 className="font-bold my-5 text-xl overflow-hidden h-14">{item.title}</h2>
 

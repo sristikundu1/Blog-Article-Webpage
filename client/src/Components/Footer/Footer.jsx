@@ -6,8 +6,8 @@ import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <div className="bg-[#1E1E1E] pt-10">
-            <div className="flex flex-col  items-center justify-center pb-5 gap-5 md:grid grid-cols-2  md:gap-5 md:pb-5 lg:max-w-4xl lg:mx-auto lg:flex lg:flex-row lg:justify-between lg:items-start lg:pb-10">
+        <div className="bg-[#1E1E1E] pt-10"  >
+            <div className="flex flex-col  items-center justify-center pb-5 gap-5 md:grid grid-cols-2  md:gap-5 md:pb-5 lg:max-w-4xl lg:mx-auto lg:flex lg:flex-row lg:justify-between lg:items-start lg:pb-10" data-aos="zoom-in" data-aos-duration="3000">
 
                 <div className="flex justify-start flex-col ml-16 lg:ml-0 ">
                     <h2 className="text-white font-semibold mb-3">Study UX</h2>
@@ -70,7 +70,7 @@ const Footer = () => {
             </div>
 
             <div className="bg-[#000000] py-5">
-                <div className=" text-[#bebdbd] flex flex-col items-center justify-center gap-5 pb-5  lg:max-w-4xl lg:mx-auto lg:flex lg:flex-row lg:justify-between">
+                <div className=" text-[#bebdbd] flex flex-col items-center justify-center gap-5 pb-5  lg:max-w-4xl lg:mx-auto lg:flex lg:flex-row lg:justify-between" data-aos="zoom-in" data-aos-duration="3000">
                     <p>Copyright © 2024 SG Education</p>
 
                     <div>

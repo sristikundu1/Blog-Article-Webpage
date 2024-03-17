@@ -51,7 +51,7 @@ const MainNews = ({ searchItem, clickedItem }) => {
         const contactPreference = form.contactPreference.checked;
         const receiveUpdates = form.receiveUpdates.checked;
 
-        const information = {FirstName, LastName, Email, formattedMobileNumber, Course, Plan, Address, Fund, Level,termsAgreement,contactPreference,receiveUpdates};
+        const information = { FirstName, LastName, Email, formattedMobileNumber, Course, Plan, Address, Fund, Level, termsAgreement, contactPreference, receiveUpdates };
 
         fetch(" https://server-five-rust.vercel.app/info", {
             method: 'POST',
@@ -64,7 +64,7 @@ const MainNews = ({ searchItem, clickedItem }) => {
             .then(data => {
                 console.log("Inside post response", data);
                 if (data.insertedId) {
-                   toast.success("Thank You! Your information has been submitted securely.")
+                    toast.success("Thank You! Your information has been submitted securely.")
                     form.reset();
                 }
             })
@@ -72,8 +72,9 @@ const MainNews = ({ searchItem, clickedItem }) => {
     }
 
     return (
-        <div className="pl-16 md:pl-14 lg:max-w-4xl mx-auto lg:pl-0">
-            <div className="grid grid-cols-1 my-16 lg:grid-cols-3 gap-3 ">
+        <div className="px-16 md:px-14 lg:max-w-4xl mx-auto lg:px-0">
+            <div className="grid grid-cols-1 my-16 lg:grid-cols-3 gap-3 " data-aos="fade-up"
+                data-aos-duration="3000">
                 {/* left side  */}
                 <div className="lg:col-span-2 ">
 
@@ -216,7 +217,8 @@ const MainNews = ({ searchItem, clickedItem }) => {
                 </div>
 
                 {/* right side  */}
-                <div className="lg:col-span-1  ">
+                <div className="lg:col-span-1  " data-aos="flip-left"
+                    data-aos-duration="3000">
                     <div className="bg-[#1C66D7] rounded-t-lg ">
                         <div className=" text-white px-5 py-3">
                             <h2 className="font-medium text-xl">Interested in studying UX?</h2>

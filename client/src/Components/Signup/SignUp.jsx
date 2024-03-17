@@ -43,7 +43,7 @@ const SignUp = () => {
     return (
         <div>
             <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.pinimg.com/originals/13/0b/d6/130bd6e30437a7b8cc3179bb08d82e56.gif)' }}>
-                {/* <div className="hero-overlay "></div> */}
+             
                 <div className="hero-content text-center text-neutral-content">
                     <div className="md:w-[500px]">
                         <div className=" col-span-3">
@@ -87,15 +87,6 @@ const SignUp = () => {
                                 </form>
                             </div>
 
-                            {/* {
-                                signUpError && <p>{signUpError}</p>
-
-                            }
-                            {
-                                success && <p>{success}</p>
-
-                            } */}
-
 
                             <div className=" flex flex-col justify-center items-center  ">
                                 <Link to="/login">
@@ -110,7 +101,7 @@ const SignUp = () => {
                                         <button
                                             onClick={handleClickGoogle}
                                             className="btn bg-[#e7c6ff] text-[#00509d]">
-                                            LogIn with Google
+                                            SignUp with Google
                                             <FcGoogle></FcGoogle>
                                         </button>
                                     </Link>

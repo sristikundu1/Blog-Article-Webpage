@@ -95,7 +95,7 @@ const Login = () => {
                                 <Link to="/signup">
                                     <p className="text-[#fb5607] font-bold	text-center mt-2">New here? Create a New Account</p>
                                 </Link>
-                                <h2 className="text-center mt-3">Or sign in with</h2>
+                                <h2 className="text-center mt-3">Or Log in with</h2>
 
 
                                 <div className="flex gap-6 text-3xl mt-2">

@@ -5,6 +5,7 @@ import Header from "../../Components/Header/Header";
 import MainNews from "../../Components/MainNews/MainNews";
 import NAvbar from "../../Components/Navbar/NAvbar";
 import RelatedNews from "../../Components/RelatedNews/RelatedNews";
+import OverView from "../../Components/OverView/OverView";
 
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
             <Header/>
             <NAvbar handleShowSearch={handleShowSearch}/>
             <MainNews searchItem={searchItem} clickedItem={clickedItem}/>
+            <OverView/>
             <RelatedNews handleCardClick={handleCardClick}/>
             <Footer/>
         </div>
