@@ -1,0 +1,131 @@
+{
+    "categories": [
+      {
+        "name": "Study abroad",
+        "title":"Study UX In Abroad",
+        "imageUrls": [
+          "https://i.ibb.co/mXF2C4x/8ab0dd97116b4f2acf8a28b4ee11ebda0e6fbed2.png",
+          "https://i.ibb.co/NrXWc3h/c514204624e9270d8211a25847e3912fe308aa91.png",
+          "https://i.ibb.co/KVjhCZ1/ea7d611a2b522acb800271bdc6971a79b3aedc9d.png"
+        ],
+        "titles": [
+          "Study UX In SG",
+          "Study Ui In SG",
+          "Embrace Diversity"
+        ],
+        "shortHeadings": [
+          "Expand Your Worldview",
+          "Experience Global Learning",
+          "Embrace Diversity",
+          "Study UX In SG",
+          "Study Ui In SG"
+        ]
+      },
+      {
+        "name": "What we do?",
+        "title":"Our Services",
+        "imageUrls": [
+          "https://www.24hourexperience.com.au/wp-content/uploads/2023/08/partner-visa-migration-agent-melbourne1.jpg",
+          "https://img.freepik.com/premium-photo/group-students-attending-graduation-ceremony-nice-day_115086-774.jpg",
+          "https://www.studying-in-germany.org/wp-content/uploads/2016/07/The-University-Entrance-Qualification-Abitur.jpg"
+        ],
+        "titles": [
+          "Innovative Solutions",
+          "Customer-focused Services",
+          "Excellence in Service"
+        ],
+        "shortHeadings": [
+          "Leading-edge Solutions",
+          "Customer-focused Services",
+          "Unmatched Quality",
+          "Innovative Solutions",
+          "Excellence in Service"
+        ]
+      },
+      {
+        "name": "Destinations",
+        "title":"Featured Destinations",
+        "imageUrls": [
+          "https://images.unsplash.com/photo-1548048026-5a1a941d93d3?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHN0dWR5JTIwYWJyb2FkfGVufDB8fDB8fHww",
+          "https://imageio.forbes.com/specials-images/imageserve/607590ba05bd6e626df132b2/Cheerful-college-students-walking-out-of-campus-together--posing-outdoors/960x0.jpg?format=jpg&width=960",
+          "https://www.go.study/assets/usa/bachelor-degree-in-usa.jpg"
+        ],
+        "titles": [
+          "Dream Destinations Await",
+          "Unforgettable Journeys",
+          "Adventure Awaits"
+        ],
+        "shortHeadings": [
+          "Explore Exotic Locales",
+          "Dream Destinations Await",
+          "Discover Hidden Gems",
+          "Adventure Awaits",
+          "Unforgettable Journeys"
+        ]
+      },
+      {
+        "name": "Find a course",
+        "title":"Browse Courses",
+        "imageUrls": [
+          "https://www.daad-bangladesh.org/files/2022/06/iStock-507009337_864x486px.jpg",
+          "https://cdn.potomac.edu/wp-content/uploads/2015/04/financing-education.jpg",
+          "https://blog.iefa.org/wp-content/uploads/sites/3/2023/07/14-1-1024x538.png"
+        ],
+        "titles": [
+          "Unlock Your Potential",
+          "Expand Your Skillset",
+          "Build Your Future Today"
+        ],
+        "shortHeadings": [
+          "Achieve Your Goals",
+          "Unlock Your Potential",
+          "Transform Your Career",
+          "Build Your Future Today",
+          "Expand Your Skillset"
+        ]
+      },
+      {
+        "name": "Student Essential Services",
+        "title":"Student Support",
+        "imageUrls": [
+          "https://img.freepik.com/free-photo/high-angle-stacked-books-graduation-cap-diploma-education-day_23-2149241013.jpg",
+          "https://st2.depositphotos.com/4431055/7495/i/450/depositphotos_74957577-stock-photo-student-college-student-library.jpg",
+          "https://www.totalstudentcare.com/uploades/blog/DBA10.png"
+        ],
+        "titles": [
+          "Supporting Student Success",
+          "Comprehensive Assistance",
+          "Caring for Students"
+        ],
+        "shortHeadings": [
+          "Ensuring Student Well-being",
+          "Comprehensive Assistance",
+          "Fostering Student Growth",
+          "Caring for Students",
+          "Supporting Student Success"
+        ]
+      },
+      {
+        "name": "IELTS",
+        "title":"Language Proficiency",
+        "imageUrls": [
+          "https://i.ibb.co/KVjhCZ1/ea7d611a2b522acb800271bdc6971a79b3aedc9d.png",
+          "https://www.studying-in-germany.org/wp-content/uploads/2016/07/The-University-Entrance-Qualification-Abitur.jpg",
+          "https://burst.shopifycdn.com/photos/grad-cap-diploma-and-stacked-books.jpg?width=1000&format=pjpg&exif=0&iptc=0"
+        ],
+        "titles": [
+          "Ace Your Language Test",
+          "Enhance English Fluency",
+          "Succeed in Language Exams"
+        ],
+        "shortHeadings": [
+          "Excel in Language Skills",
+          "Enhance English Fluency",
+          "Succeed in Language Exams",
+          "Ace Your Language Test",
+          "Excel in Language Proficiency"
+        ]
+      }
+    ]
+  }
+  

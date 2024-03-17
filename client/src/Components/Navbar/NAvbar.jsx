@@ -1,14 +1,30 @@
 import { IoSearchSharp } from "react-icons/io5";
 import { RiSearchLine } from "react-icons/ri";
 // import { PiArrowCircleRight } from "react-icons/pi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 
-const NAvbar = ({handleShowSearch}) => {
+const NAvbar = ({ handleShowSearch }) => {
     const [inputValue, setInputValue] = useState('');
     const [showSuggestions, setShowSuggestions] = useState(false);
-    const [suggestions, setSuggestions] = useState(['Exciting New Tools for Designers, March 2024', 'Web Tech Trends to Watch in 2024 and Beyond', '6 Best AI Productivity Apps in 2024', 'Surviving the Leap from College to Real-World Design']); // Example suggestions
+
+    const [suggestions, setSuggestions] = useState([
+        'Exciting New Tools for Designers, March 2024',
+        'Web Tech Trends to Watch in 2024 and Beyond',
+        '6 Best AI Productivity Apps in 2024',
+        'Surviving the Leap from College to Real-World Design']);
+
     const [selectedItemIndex, setSelectedItemIndex] = useState(null);
+    const [hoveredItem, setHoveredItem] = useState(null);
+    const [infos, setinfos] = useState([]);
+
+
+    useEffect(() => {
+        fetch('/navdata.json')
+            .then(res => res.json())
+            .then(data => setinfos(data.categories))
+    }, [])
+
 
     const handleInputChange = (event) => {
         const value = event.target.value;
@@ -32,22 +48,72 @@ const NAvbar = ({handleShowSearch}) => {
         setInputValue(text);
     };
 
-   
+    const handleItemHover = (item) => {
+        // Access data from 'infos' based on the hovered item
+        const category = infos.find(category => category.name === item);
+        if (category) {
+            // Set the hovered item along with additional data from the fetched JSON
+            setHoveredItem(category);
+        }
+    };
+
+    const handleMouseLeave = () => {
+        setHoveredItem(null);
+    };
+
+
+
+
+
+
 
     return (
-        <div className="bg-[#000000]">
+        <div className="bg-[#000000] relative">
             <div>
-                <ul className="flex items-center justify-center gap-6 py-5 text-[#bebdbd] text-xs font-medium">
-                    <li>Study abroad</li>
-                    <li>What we do?</li>
-                    <li>Destinations</li>
-                    <li>Find a course</li>
-                    <li>Student Essential Services</li>
-                    <li>IELTS</li>
+                <ul className="flex items-center justify-center gap-6  text-[#bebdbd] text-xs font-medium">
+                    <li className=" hover:bg-[#E0561B] hover:text-white px-2 py-5 " onMouseEnter={() => handleItemHover("Study abroad")} onMouseLeave={handleMouseLeave}>Study abroad</li>
+                    <li className=" hover:bg-[#E0561B] hover:text-white  px-2 py-5" onMouseEnter={() => handleItemHover("What we do?")} onMouseLeave={handleMouseLeave}>What we do?</li>
+                    <li className=" hover:bg-[#E0561B] hover:text-white  px-2 py-5" onMouseEnter={() => handleItemHover("Destinations")} onMouseLeave={handleMouseLeave}>Destinations</li>
+                    <li className=" hover:bg-[#E0561B] hover:text-white  px-2 py-5" onMouseEnter={() => handleItemHover("Find a course")} onMouseLeave={handleMouseLeave}>Find a course</li>
+                    <li className=" hover:bg-[#E0561B] hover:text-white  px-2 py-5" onMouseEnter={() => handleItemHover("Student Essential Services")} onMouseLeave={handleMouseLeave}>Student Essential Services</li>
+                    <li className=" hover:bg-[#E0561B] hover:text-white  px-2 py-5" onMouseEnter={() => handleItemHover("IELTS")} onMouseLeave={handleMouseLeave}>IELTS</li>
 
                     {/* The icon to open modal  */}
-                    <li onClick={() => document.getElementById('my_modal_2').showModal()} className="text-lg"><IoSearchSharp /></li>
+                    <li onClick={() => document.getElementById('my_modal_2').showModal()} className="text-lg hover:bg-[#E0561B] hover:text-white  px-2 py-5"><IoSearchSharp /></li>
                 </ul>
+                <div className="absolute top-16 left-44">
+                    {hoveredItem && (
+                        <div className="card bg-white w-[980px] border px-10 py-10 shadow-2xl">
+                            <h2 className="font-bold text-lg">{hoveredItem.title}</h2>
+
+                            <div className="flex gap-5 mb-8">
+                                <div>
+                                    <div className="image-container grid grid-cols-3 gap-5 mt-8">
+                                        {hoveredItem.imageUrls.map((image, index) => (
+                                            // <h2 key={index} >{image}</h2>
+                                            <img className="rounded-lg object-cover h-44 w-56" key={index} src={image} alt="image" />
+                                        ))}
+                                    </div>
+
+                                    <div className="title-container grid grid-cols-3 gap-5 mt-8">
+                                        {hoveredItem.titles.map((title, index) => (
+                                            <h2 className="font-medium " key={index} >{title}</h2>
+
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="title-container mt-8 flex flex-col gap-3">
+                                    {hoveredItem.shortHeadings.map((shortHeading, index) => (
+                                        <h2 className="font-medium " key={index} >{shortHeading}</h2>
+
+                                    ))}
+                                </div>
+                            </div>
+                            {/* Additional content related to the hovered item */}
+                        </div>
+                    )}
+                </div>
 
                 {/* Open the modal using document.getElementById('ID').showModal() method */}
 
@@ -72,8 +138,8 @@ const NAvbar = ({handleShowSearch}) => {
                         {showSuggestions && (
                             <ul className="absolute z-10 bg-white flex flex-col text-[#999999] top-[200px] pb-10">
                                 {suggestions.map((suggestion, index) => (
-                                    <li key={index} className="px-4 py-2 hover:bg-gray-100 cursor-pointer" 
-                                    onClick={() => handleItemClick(index)}>{suggestion}</li>
+                                    <li key={index} className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                        onClick={() => handleItemClick(index)}>{suggestion}</li>
                                 ))}
                             </ul>
                         )}
@@ -90,7 +156,7 @@ const NAvbar = ({handleShowSearch}) => {
                     </form>
                 </dialog>
 
-               
+
             </div>
 
         </div >
